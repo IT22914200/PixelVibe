@@ -1,0 +1,254 @@
+.profile-container {
+  background: linear-gradient(135deg, #fffcfc 0%, #ffffff 100%);
+  min-height: 100vh;
+  padding: 2rem 1rem;
+}
+
+.profile-card {
+  max-width: 900px;
+  margin: 0 auto;
+  background: rgb(255, 255, 255);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.profile-header {
+  background: linear-gradient(135deg, #020f48 0%, #37249f 100%);
+  padding: 2rem;
+  color: white;
+  position: relative;
+}
+
+.profile-header::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  right: 0;
+  height: 20px;
+  background: linear-gradient(to bottom right, transparent 49%, white 50%);
+}
+
+.profile-content {
+  padding: 2rem;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.info-item {
+  padding: 1rem;
+  background: #130450;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.info-item:hover {
+  background: #e9ecef;
+  transform: translateY(-2px);
+}
+
+.label {
+  color: #ffffff;
+  font-size: 0.875rem;
+  margin-bottom: 0.25rem;
+}
+
+.value {
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.edit-btn {
+  background: linear-gradient(135deg, #020e44 0%, #7373bc 100%);
+  color: white;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.edit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.cancel-btn {
+  background: #f8f9fa;
+  color: #495057;
+  border: 1px solid #dee2e6;
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.cancel-btn:hover {
+  background: #e9ecef;
+}
+
+.save-btn {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  color: white;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.save-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.logout-btn {
+  background: #1e055d;
+  color: #fefefe;
+  border: 1px solid #dee2e6;
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+  background: #e9ecef;
+}
+
+.delete-btn {
+  background: linear-gradient(135deg, #f9f9f9 0%, #f90101 100%);
+  color: white;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.delete-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.form-input:focus {
+  border-color: #80bdff;
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.error-input {
+  border-color: #dc3545 !important;
+}
+
+.error-text {
+  color: #dc3545;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.spinner {
+  width: 3rem;
+  height: 3rem;
+  border: 0.25rem solid rgba(102, 126, 234, 0.2);
+  border-top-color: #667eea;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.toggle-slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .toggle-slider {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+input:checked + .toggle-slider:before {
+  transform: translateX(26px);
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.status-active {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.status-deleted {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+.divider {
+  border-top: 1px solid #e9ecef;
+  margin: 1.5rem 0;
+}
